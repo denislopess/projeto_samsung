@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+html,body{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.headerPrincipal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    height: 65px;
+}
+div.headerPrincipal nav ul{
+    display: flex;
+    list-style: none;
+}
+div.headerPrincipal nav li{
+    padding: 0 14px;
+}
+div.headerPrincipal nav a{
+    color:#444;
+    text-transform: uppercase;
+    font-size:14px;
+    font-weight: bold;
+}
+a.logo{
+    display: block;
+    width: 130px;
+    height: 20px;
+    background-image: url('../img/logo.png');
+    background-size:100%;
+}
+
+div.icons i{
+    padding: 0 14px;
+}
