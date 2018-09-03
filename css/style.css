@@ -16,19 +16,27 @@ div.headerPrincipal{
     justify-content: space-around;
     align-items: center;    
     height: 65px;
+    border-bottom: 1px solid #ccc;
 }
 div.headerPrincipal nav ul{
     display: flex;
-    list-style: none;
+    list-style-type: none;
 }
 div.headerPrincipal nav li{
     padding: 0 14px;
 }
-div.headerPrincipal nav a{
+div.headerPrincipal nav li:hover > a{
+    color:#1428a0;
+    border-bottom: 3px solid #1428a0;
+}
+div.headerPrincipal nav > ul > li > a{
     color:#444;
     text-transform: uppercase;
     font-size:14px;
     font-weight: bold;
+    height: 65px;
+    display: flex;
+    align-items: center;
 }
 a.logo{
     display: block;
@@ -40,4 +48,52 @@ a.logo{
 
 div.icons i{
     padding: 0 14px;
+}
+
+
+div.headerPrincipal nav li:hover div.submenu{
+    display: flex;
+}
+
+/*Submenu*/
+div.submenu{
+    display: none;
+    position: absolute;
+    left:0;
+    padding: 50px;
+    width: 100%;
+}
+
+div.submenu .submenu-itens{
+    flex:1;
+}
+div.submenu .submenu-itens:nth-of-type(2){
+    max-width: 200px;
+}
+div.submenu .submenu-itens:nth-of-type(3){
+    border-left: 1px solid #ccc;
+    padding: 0 14px;
+}
+
+div.submenu .submenu-itens{
+    display: flex;
+    flex-direction: column;
+}
+div.submenu .submenu-itens a{
+    color: #444;
+    padding: 5px 0;
+}
+
+div.submenu .submenu-itens a:nth-child(1){
+    text-transform: uppercase;
+    color: #222;
+    font-weight: bold;
+}
+
+div.submenu .submenu-img{
+    flex:2;
+}
+div.submenu .submenu-close i{
+    font-size: 25px;
+    cursor: pointer;
 }
