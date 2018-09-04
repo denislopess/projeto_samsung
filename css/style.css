@@ -9,6 +9,7 @@ a{
 html,body{
     height: 100%;
     font-family: 'Montserrat', sans-serif;
+    font-size:10px;
 }
 
 div.headerPrincipal{
@@ -18,21 +19,21 @@ div.headerPrincipal{
     height: 65px;
     border-bottom: 1px solid #ccc;
 }
-div.headerPrincipal nav ul{
+div.headerPrincipal nav.desktop ul{
     display: flex;
     list-style-type: none;
 }
-div.headerPrincipal nav li{
+div.headerPrincipal nav.desktop li{
     padding: 0 14px;
 }
-div.headerPrincipal nav li:hover > a{
+div.headerPrincipal nav.desktop li:hover > a{
     color:#1428a0;
     border-bottom: 3px solid #1428a0;
 }
-div.headerPrincipal nav > ul > li > a{
+div.headerPrincipal nav.desktop > ul > li > a{
     color:#444;
     text-transform: uppercase;
-    font-size:14px;
+    font-size: 1.4rem;
     font-weight: bold;
     height: 65px;
     display: flex;
@@ -48,6 +49,7 @@ a.logo{
 
 div.icons i{
     padding: 0 14px;
+    font-size: 1.4rem;
 }
 
 
@@ -82,6 +84,7 @@ div.submenu .submenu-itens{
 div.submenu .submenu-itens a{
     color: #444;
     padding: 5px 0;
+    font-size: 1.4rem;
 }
 
 div.submenu .submenu-itens a:nth-child(1){
@@ -91,9 +94,81 @@ div.submenu .submenu-itens a:nth-child(1){
 }
 
 div.submenu .submenu-img{
-    flex:2;
+    flex:1;
 }
 div.submenu .submenu-close i{
-    font-size: 25px;
+    font-size: 2.5rem;
     cursor: pointer;
+}
+
+nav.mobile{
+    display: none;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 1280px){
+    html,
+    body{
+        font-size: 9px;
+    }
+    div.headerPrincipal nav li{
+        padding: 0 9px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+
+    body,html{
+        background: #ccc;
+    }
+
+    div.headerPrincipal{
+        justify-content: space-between;
+        padding: 0 20px;
+        background: #fff;
+    }
+    nav.desktop{
+        display: none;
+    }
+    nav.mobile{
+        display: block;
+    }
+
+    nav.mobile > i{
+        font-size: 1.4rem;
+        cursor: pointer;
+        height: 65;
+        display: flex;
+        align-items: center;
+    }
+    nav.mobile ul{
+        display: none;
+        list-style-type: none;
+        position: absolute;
+        left: 0;
+        width: 90%;
+        height: 100vh;
+        background: #fff;
+
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+    nav.mobile li{
+        width: 100%;
+    }
+
+    nav.mobile li:nth-of-type(4),
+    nav.mobile li:nth-of-type(8){
+        border-bottom: 1px solid #eee;
+    }
+
+    nav.mobile li a{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        font-size: 1.4rem;
+    }
+    nav.mobile li a i{
+        font-size: 1.4rem;
+    }
 }
