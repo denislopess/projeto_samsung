@@ -57,6 +57,7 @@ div.headerPrincipal nav li:hover div.submenu{
     display: flex;
 }
 
+
 /*Submenu*/
 div.submenu{
     display: none;
@@ -105,6 +106,70 @@ nav.mobile{
     display: none;
 }
 
+/*section Banner*/
+section.banner{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+section.banner img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+section.banner img:nth-child(2){
+    display:none;
+    max-width: 100%;
+    height: auto;
+}
+
+div.container{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+div.descricao-banner{
+    margin-left:auto;
+    color:white;
+    max-width: 600px;
+}
+
+
+.descricao-banner h1{
+    font-size: 7.5rem;
+    margin: 5px 0;
+}
+
+.descricao-banner p{
+    font-size: 2.0rem;
+    margin: 5px 0 50px;
+}
+
+.descricao-banner a{
+    color:white;
+    margin: 15px 0;
+}
+
+a.aBanner{
+    padding: 10px 50px;
+    border-radius: 20px;
+    border:2px solid #fff;
+    margin-right: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+a.aBanner:hover{
+    background: black;
+    color:white;
+    border: 2px solid #000;
+}
+
 /*Media Queries*/
 @media screen and (max-width: 1280px){
     html,
@@ -147,8 +212,9 @@ nav.mobile{
         position: absolute;
         left: 0;
         width: 90%;
-        height: 100vh;
+        height: auto;
         background: #fff;
+        z-index: 9;
 
         border-right: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
@@ -171,4 +237,15 @@ nav.mobile{
     nav.mobile li a i{
         font-size: 1.4rem;
     }
+
+    .descricao-banner{
+        max-width: 500px;
+    }
+    .descricao-banner h1{
+        font-size: 6.5rem;
+    }
+}
+
+@media screen and(max-width: 910px){
+    
 }
